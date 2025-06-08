@@ -10,17 +10,9 @@
   <style>
     body {
       margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      color: #00ffcc;
-      background: black;
-      overflow-x: hidden;
-    }
-
-    canvas {
-      position: fixed;
-      top: 0;
-      left: 0;
-      z-index: -1;
+      font-family: 'Segoe UI', monospace;
+      background-color: #10131a;
+      color: #e0e0e0;
     }
 
     .container {
@@ -29,32 +21,8 @@
       padding: 2rem;
     }
 
-    h1 {
-      text-align: center;
-      font-size: 2.5rem;
-      margin-bottom: 0.5rem;
-    }
-
-    .logo {
-      text-align: center;
-      font-family: monospace;
-      font-size: 1.5rem;
-      color: #00ffcc;
-      margin-bottom: 2rem;
-    }
-
-    h2 {
+    h1, h2 {
       color: #00e676;
-      margin-top: 2rem;
-    }
-
-    ul {
-      list-style-type: none;
-      padding: 0;
-    }
-
-    li {
-      margin-bottom: 2rem;
     }
 
     a {
@@ -66,6 +34,15 @@
       text-decoration: underline;
     }
 
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    li {
+      margin-bottom: 2rem;
+    }
+
     footer {
       margin-top: 3rem;
       font-size: 0.9rem;
@@ -74,18 +51,76 @@
       padding-top: 1rem;
       text-align: center;
     }
+
+    /* Modal stile C2 */
+    #loginModal {
+      position: fixed;
+      z-index: 10;
+      left: 0;
+      top: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: rgba(0, 0, 0, 0.9);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    #loginBox {
+      background-color: #1b1f27;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 0 10px #00e676;
+      text-align: center;
+      width: 300px;
+    }
+
+    #loginBox input {
+      margin-top: 1rem;
+      width: 100%;
+      padding: 0.5rem;
+      border: none;
+      border-radius: 4px;
+      background-color: #2a2f3a;
+      color: #e0e0e0;
+    }
+
+    #loginBox button {
+      margin-top: 1rem;
+      width: 100%;
+      padding: 0.6rem;
+      background-color: #00e676;
+      color: black;
+      border: none;
+      border-radius: 4px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    #loginBox button:hover {
+      background-color: #00c766;
+    }
+
+    .hidden {
+      display: none;
+    }
   </style>
 </head>
 <body>
-  <canvas id="matrixCanvas"></canvas>
 
-  <div class="container">
-    <div class="logo">
-      [⚡ aitsu01 // CODE ≠ CONTROL ⚡]
+  <!-- Modal accesso tipo C2 -->
+  <div id="loginModal">
+    <div id="loginBox">
+      <h2>Accesso C2</h2>
+      <input type="text" placeholder="Username" id="username" />
+      <input type="password" placeholder="Password" id="password" />
+      <button onclick="unlockPortfolio()">Connetti</button>
     </div>
+  </div>
 
+  <div class="container hidden" id="mainContent">
     <h1>aitsu01 | Full Stack Dev & Cybersecurity Engineer</h1>
-    <p>Sono un <strong>Full Stack Developer</strong> con forte specializzazione in <strong>Cybersecurity</strong> e <strong>Ingegneria Back-End</strong>. Mi occupo di sviluppare strumenti per analisi offensiva, automazioni di sicurezza e applicazioni web scalabili.</p>
+    <p>Sono un <strong>Full Stack Developer</strong> con specializzazione in <strong>Cybersecurity</strong> e <strong>Back-End Engineering</strong>. Sviluppo strumenti per analisi offensive, automazioni di sicurezza, RAT, script avanzati e applicazioni web sicure e scalabili.</p>
 
     <h2>💣 Progetti Hardcore</h2>
     <ul>
@@ -94,7 +129,7 @@
         <em>Python</em><br/>
         <a href="https://github.com/aitsu01/FTP-Credentials-Checker" target="_blank">Codice su GitHub</a> |
         <a href="https://aitsu01.github.io/FTP-Credentials-Checker/" target="_blank">Demo Live</a><br/>
-        <p>Tool in Python per testare credenziali FTP, gestire configurazioni e automatizzare upload. Ottimo per penetration tester e sysadmin.</p>
+        <p>Tool per test credenziali FTP, configurazioni e automazioni via file .env. Ideale per penetration tester e sysadmin.</p>
       </li>
 
       <li>
@@ -102,7 +137,7 @@
         <em>Python & C++</em><br/>
         <a href="#" target="_blank">Codice a breve su GitHub</a> |
         <a href="https://github.com/aitsu01/TelegramRAT-BOT-GUI" target="_blank">Demo Live</a><br/>
-        <p>RAT modulare con C2 GUI in Python e payload scritto in C++. Permette controllo remoto via Telegram con funzionalità avanzate.</p>
+        <p>RAT con C2 in Python e payload in C++. Controllo remoto via Telegram, shell reversa, keylogging e altro.</p>
       </li>
 
       <li>
@@ -110,7 +145,7 @@
         <em>Laravel, HTML5 & CSS</em><br/>
         <a href="https://github.com/aitsu01/Booking-FlightsScan-Laravel" target="_blank">Codice su GitHub</a> |
         <a href="https://github.com/aitsu01/Booking-FlightsScan-Laravel" target="_blank">Demo Live</a><br/>
-        <p>App web per prenotazioni aeree basata su API esterne. Costruita con Laravel, utile per testare integrazione di servizi e scraping.</p>
+        <p>Motore di ricerca voli in stile Skyscanner con backend in Laravel e API per gestione prenotazioni.</p>
       </li>
     </ul>
 
@@ -126,36 +161,18 @@
   </div>
 
   <script>
-    const canvas = document.getElementById('matrixCanvas');
-    const ctx = canvas.getContext('2d');
+    function unlockPortfolio() {
+      const user = document.getElementById("username").value;
+      const pass = document.getElementById("password").value;
 
-    canvas.height = window.innerHeight;
-    canvas.width = window.innerWidth;
-
-    const matrix = "01";
-    const fontSize = 14;
-    const columns = canvas.width / fontSize;
-    const drops = Array.from({ length: columns }, () => 1);
-
-    function drawMatrix() {
-      ctx.fillStyle = "rgba(0, 0, 0, 0.05)";
-      ctx.fillRect(0, 0, canvas.width, canvas.height);
-      ctx.fillStyle = "#00ffcc";
-      ctx.font = fontSize + "px monospace";
-
-      for (let i = 0; i < drops.length; i++) {
-        const text = matrix[Math.floor(Math.random() * matrix.length)];
-        ctx.fillText(text, i * fontSize, drops[i] * fontSize);
-        drops[i] = (drops[i] * fontSize > canvas.height || Math.random() > 0.975) ? 0 : drops[i] + 1;
+      // Simulazione login (qualsiasi input sblocca l'accesso)
+      if (user && pass) {
+        document.getElementById("loginModal").classList.add("hidden");
+        document.getElementById("mainContent").classList.remove("hidden");
+      } else {
+        alert("Accesso negato: credenziali richieste.");
       }
     }
-
-    setInterval(drawMatrix, 33);
-
-    window.addEventListener('resize', () => {
-      canvas.height = window.innerHeight;
-      canvas.width = window.innerWidth;
-    });
   </script>
 </body>
 </html>
