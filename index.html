@@ -3,36 +3,69 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="Portfolio di aitsu01 - Cybersecurity Specialist e Sviluppatore Full Stack con focus su offensive security, scripting avanzato e automazioni." />
-  <meta name="keywords" content="aitsu01, cybersecurity, hacking etico, penetration testing, Python, GitHub, progetti, offensive security" />
+  <meta name="description" content="Portfolio di aitsu01 - Full Stack Developer specializzato in Cybersecurity e Back-End." />
+  <meta name="keywords" content="aitsu01, cybersecurity, back-end, full stack, GitHub, hacking, RAT, Python, Laravel, progetti" />
   <meta name="author" content="aitsu01" />
-  <title>aitsu01 | Cybersecurity & Offensive Dev</title>
+  <title>aitsu01 | Cybersecurity & Full Stack Dev</title>
   <style>
     body {
+      margin: 0;
       font-family: 'Segoe UI', sans-serif;
-      background-color: #0f1117;
-      color: #e0e0e0;
+      color: #00ffcc;
+      background: black;
+      overflow-x: hidden;
+    }
+
+    canvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: -1;
+    }
+
+    .container {
       max-width: 900px;
       margin: 0 auto;
       padding: 2rem;
     }
-    h1, h2 {
-      color: #00e676;
+
+    h1 {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
     }
+
+    .logo {
+      text-align: center;
+      font-family: monospace;
+      font-size: 1.5rem;
+      color: #00ffcc;
+      margin-bottom: 2rem;
+    }
+
+    h2 {
+      color: #00e676;
+      margin-top: 2rem;
+    }
+
     ul {
       list-style-type: none;
       padding: 0;
     }
+
     li {
       margin-bottom: 2rem;
     }
+
     a {
       color: #29b6f6;
       text-decoration: none;
     }
+
     a:hover {
       text-decoration: underline;
     }
+
     footer {
       margin-top: 3rem;
       font-size: 0.9rem;
@@ -41,53 +74,90 @@
       padding-top: 1rem;
       text-align: center;
     }
-    em {
-      color: #81d4fa;
-    }
-    p {
-      line-height: 1.6;
-    }
   </style>
 </head>
 <body>
-  <h1>aitsu01 | Cybersecurity Engineer & Dev</h1>
-  <p>Specializzato in <strong>Offensive Security</strong> e <strong>Sviluppo di tool per l'automazione</strong>, realizzo soluzioni personalizzate in Python, C++, e tecnologie web per la sicurezza informatica. Amo sporcarmi le mani con exploit, C2, RAT, script avanzati e penetration testing tools.</p>
+  <canvas id="matrixCanvas"></canvas>
 
-  <h2>💣 Progetti Hardcore</h2>
-  <ul>
-    <li>
-      <strong>FTP Credentials Checker</strong><br/>
-      <em>Python</em><br/>
-      <a href="https://github.com/aitsu01/FTP-Credentials-Checker" target="_blank">Codice su GitHub</a> |
-      <a href="https://aitsu01.github.io/FTP-Credentials-Checker/" target="_blank">Demo Live</a><br/>
-      <p>Tool scritto in Python per il brute-force e la verifica rapida delle credenziali FTP. Supporta upload automatico e gestione .env per ambienti multipli. Ottimo per red teamer e tester.</p>
-    </li>
+  <div class="container">
+    <div class="logo">
+      [⚡ aitsu01 // CODE ≠ CONTROL ⚡]
+    </div>
 
-    <li>
-      <strong>Telegram BOT RAT</strong><br/>
-      <em>Python & C++</em><br/>
-      <a href="#" target="_blank">Codice a breve su GitHub</a> |
-      <a href="https://github.com/aitsu01/TelegramRAT-BOT-GUI" target="_blank">Demo Live</a><br/>
-      <p>RAT completo con interfaccia C2 in Python e payload in C++. Comandi remoti via Telegram, file transfer, shell reversa e monitoraggio. Per analisi, ricerca e scopi didattici.</p>
-    </li>
+    <h1>aitsu01 | Full Stack Dev & Cybersecurity Engineer</h1>
+    <p>Sono un <strong>Full Stack Developer</strong> con forte specializzazione in <strong>Cybersecurity</strong> e <strong>Ingegneria Back-End</strong>. Mi occupo di sviluppare strumenti per analisi offensiva, automazioni di sicurezza e applicazioni web scalabili.</p>
 
-    <li>
-      <strong>Sky Scanner</strong><br/>
-      <em>Laravel, HTML5 & CSS</em><br/>
-      <a href="https://github.com/aitsu01/Booking-FlightsScan-Laravel" target="_blank">Codice su GitHub</a> |
-      <a href="https://github.com/aitsu01/Booking-FlightsScan-Laravel" target="_blank">Demo Live</a><br/>
-      <p>Web app ispirata a Skyscanner con backend solido in Laravel. Ideale per testing delle API, scraping e gestione massiva di dati in ambiente sicuro.</p>
-    </li>
-  </ul>
+    <h2>💣 Progetti Hardcore</h2>
+    <ul>
+      <li>
+        <strong>FTP Credentials Checker</strong><br/>
+        <em>Python</em><br/>
+        <a href="https://github.com/aitsu01/FTP-Credentials-Checker" target="_blank">Codice su GitHub</a> |
+        <a href="https://aitsu01.github.io/FTP-Credentials-Checker/" target="_blank">Demo Live</a><br/>
+        <p>Tool in Python per testare credenziali FTP, gestire configurazioni e automatizzare upload. Ottimo per penetration tester e sysadmin.</p>
+      </li>
 
-  <h2>🕶️ Profilo</h2>
-  <p>Attivo su GitHub con un focus su <strong>cybersecurity, sviluppo di exploit, automazioni e strumenti per il penetration testing</strong>. Ogni progetto è una prova di concetto con impatto reale nel mondo della sicurezza informatica.</p>
+      <li>
+        <strong>Telegram BOT RAT</strong><br/>
+        <em>Python & C++</em><br/>
+        <a href="#" target="_blank">Codice a breve su GitHub</a> |
+        <a href="https://github.com/aitsu01/TelegramRAT-BOT-GUI" target="_blank">Demo Live</a><br/>
+        <p>RAT modulare con C2 GUI in Python e payload scritto in C++. Permette controllo remoto via Telegram con funzionalità avanzate.</p>
+      </li>
 
-  <h2>📫 Contatti</h2>
-  <p>Collegati con me o contribuisci ai miei progetti: <a href="https://github.com/aitsu01" target="_blank">github.com/aitsu01</a></p>
+      <li>
+        <strong>Sky Scanner</strong><br/>
+        <em>Laravel, HTML5 & CSS</em><br/>
+        <a href="https://github.com/aitsu01/Booking-FlightsScan-Laravel" target="_blank">Codice su GitHub</a> |
+        <a href="https://github.com/aitsu01/Booking-FlightsScan-Laravel" target="_blank">Demo Live</a><br/>
+        <p>App web per prenotazioni aeree basata su API esterne. Costruita con Laravel, utile per testare integrazione di servizi e scraping.</p>
+      </li>
+    </ul>
 
-  <footer>
-    &copy; 2025 - aitsu01 | Stay sharp. Stay stealth.
-  </footer>
+    <h2>📫 Contatti</h2>
+    <p>
+      🔗 GitHub: <a href="https://github.com/aitsu01" target="_blank">github.com/aitsu01</a><br/>
+      💼 LinkedIn: <a href="https://www.linkedin.com/in/aitsu01-full-stuck-developer/" target="_blank">linkedin.com/in/aitsu01-full-stuck-developer</a>
+    </p>
+
+    <footer>
+      &copy; 2025 - aitsu01 | Exploit. Build. Secure.
+    </footer>
+  </div>
+
+  <script>
+    const canvas = document.getElementById('matrixCanvas');
+    const ctx = canvas.getContext('2d');
+
+    canvas.height = window.innerHeight;
+    canvas.width = window.innerWidth;
+
+    const matrix = "01";
+    const fontSize = 14;
+    const columns = canvas.width / fontSize;
+    const drops = Array.from({ length: columns }, () => 1);
+
+    function drawMatrix() {
+      ctx.fillStyle = "rgba(0, 0, 0, 0.05)";
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+      ctx.fillStyle = "#00ffcc";
+      ctx.font = fontSize + "px monospace";
+
+      for (let i = 0; i < drops.length; i++) {
+        const text = matrix[Math.floor(Math.random() * matrix.length)];
+        ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+        drops[i] = (drops[i] * fontSize > canvas.height || Math.random() > 0.975) ? 0 : drops[i] + 1;
+      }
+    }
+
+    setInterval(drawMatrix, 33);
+
+    window.addEventListener('resize', () => {
+      canvas.height = window.innerHeight;
+      canvas.width = window.innerWidth;
+    });
+  </script>
 </body>
 </html>
+
+
