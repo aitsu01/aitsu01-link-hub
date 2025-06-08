@@ -57,6 +57,25 @@
       font-size: 0.9rem;
       text-align: center;
     }
+
+    .skill {
+  margin-bottom: 1.2rem;
+}
+
+.bar {
+  background-color: #2c2f36;
+  border-radius: 4px;
+  overflow: hidden;
+  height: 20px;
+}
+
+.progress {
+  background-color: #00e676;
+  height: 100%;
+  width: 0;
+  transition: width 1.5s ease-in-out;
+}
+
   </style>
 </head>
 <body>
@@ -100,7 +119,30 @@
       </li>
     </ul>
 
-    <h2>📫 Contatti</h2>
+    <h2>🧠 Skill Level</h2>
+<div class="skill">
+  <p>HTML / CSS</p>
+  <div class="bar"><div class="progress" data-value="90"></div></div>
+</div>
+<div class="skill">
+  <p>JavaScript</p>
+  <div class="bar"><div class="progress" data-value="75"></div></div>
+</div>
+<div class="skill">
+  <p>Python (Automation & Cyber)</p>
+  <div class="bar"><div class="progress" data-value="85"></div></div>
+</div>
+<div class="skill">
+  <p>PHP / Laravel</p>
+  <div class="bar"><div class="progress" data-value="70"></div></div>
+</div>
+<div class="skill">
+  <p>Cybersecurity Tools</p>
+  <div class="bar"><div class="progress" data-value="80"></div></div>
+</div>
+
+<h2>📫 Contatti</h2>
+
     <p>
       🔗 GitHub: <a href="https://github.com/aitsu01" target="_blank">github.com/aitsu01</a><br/>
       💼 LinkedIn: <a href="https://www.linkedin.com/in/aitsu01-full-stuck-developer/" target="_blank">linkedin.com/in/aitsu01-full-stuck-developer</a>
@@ -110,5 +152,15 @@
       &copy; 2025 - aitsu01 | Coding. Securing. Evolving.
     </footer>
   </div>
+  <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const bars = document.querySelectorAll(".progress");
+    bars.forEach(bar => {
+      const value = bar.getAttribute("data-value");
+      bar.style.width = value + "%";
+    });
+  });
+</script>
+
 </body>
 </html>
