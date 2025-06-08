@@ -2,17 +2,18 @@
 <html lang="it">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="Portfolio di aitsu01 - Full Stack Developer specializzato in Cybersecurity e Back-End." />
-  <meta name="keywords" content="aitsu01, cybersecurity, back-end, full stack, GitHub, hacking, RAT, Python, Laravel, progetti" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portfolio di aitsu01 - Junior Full Stack Developer con specializzazione in Cybersecurity e sviluppo back-end." />
+  <meta name="keywords" content="aitsu01, portfolio, full stack, developer, cybersecurity, back-end, GitHub, progetti" />
   <meta name="author" content="aitsu01" />
-  <title>aitsu01 | Cybersecurity & Full Stack Dev</title>
+  <title>aitsu01 | Junior Full Stack Developer & Cybersecurity Specialist</title>
   <style>
     body {
       margin: 0;
-      font-family: 'Segoe UI', monospace;
-      background-color: #10131a;
-      color: #e0e0e0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #11141a;
+      color: #e6e6e6;
+      line-height: 1.6;
     }
 
     .container {
@@ -40,112 +41,57 @@
     }
 
     li {
-      margin-bottom: 2rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .highlight {
+      color: #80cbc4;
+      font-weight: bold;
     }
 
     footer {
       margin-top: 3rem;
-      font-size: 0.9rem;
-      color: #888;
-      border-top: 1px solid #333;
       padding-top: 1rem;
+      border-top: 1px solid #333;
+      color: #999;
+      font-size: 0.9rem;
       text-align: center;
-    }
-
-    /* Modal stile C2 */
-    #loginModal {
-      position: fixed;
-      z-index: 10;
-      left: 0;
-      top: 0;
-      width: 100vw;
-      height: 100vh;
-      background-color: rgba(0, 0, 0, 0.9);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    #loginBox {
-      background-color: #1b1f27;
-      padding: 2rem;
-      border-radius: 8px;
-      box-shadow: 0 0 10px #00e676;
-      text-align: center;
-      width: 300px;
-    }
-
-    #loginBox input {
-      margin-top: 1rem;
-      width: 100%;
-      padding: 0.5rem;
-      border: none;
-      border-radius: 4px;
-      background-color: #2a2f3a;
-      color: #e0e0e0;
-    }
-
-    #loginBox button {
-      margin-top: 1rem;
-      width: 100%;
-      padding: 0.6rem;
-      background-color: #00e676;
-      color: black;
-      border: none;
-      border-radius: 4px;
-      font-weight: bold;
-      cursor: pointer;
-    }
-
-    #loginBox button:hover {
-      background-color: #00c766;
-    }
-
-    .hidden {
-      display: none;
     }
   </style>
 </head>
 <body>
+  <div class="container">
+    <h1>Benvenuto nel portfolio di aitsu01</h1>
+    <p>
+      Sono un <span class="highlight">Junior Full Stack Developer</span> con una forte passione per lo sviluppo web e una specializzazione in <span class="highlight">Cybersecurity</span> e <span class="highlight">Back-End Development</span>.
+      Amo progettare applicazioni sicure, scalabili e funzionali, con particolare attenzione alla sicurezza del codice e alla protezione dei dati.
+    </p>
 
-  <!-- Modal accesso tipo C2 -->
-  <div id="loginModal">
-    <div id="loginBox">
-      <h2>Accesso C2</h2>
-      <input type="text" placeholder="Username" id="username" />
-      <input type="password" placeholder="Password" id="password" />
-      <button onclick="unlockPortfolio()">Connetti</button>
-    </div>
-  </div>
+    <h2>🚀 Competenze principali</h2>
+    <ul>
+      <li><strong>Front-End:</strong> HTML5, CSS3, JavaScript (Vanilla & framework base)</li>
+      <li><strong>Back-End:</strong> Python, PHP (Laravel), Node.js (base), gestione API REST</li>
+      <li><strong>Cybersecurity:</strong> Analisi di vulnerabilità, script Python per automazione test, strumenti offensivi e diagnostici</li>
+      <li><strong>Tools:</strong> Git, GitHub, terminale Linux, Postman, VS Code, Burp Suite</li>
+    </ul>
 
-  <div class="container hidden" id="mainContent">
-    <h1>aitsu01 | Full Stack Dev & Cybersecurity Engineer</h1>
-    <p>Sono un <strong>Full Stack Developer</strong> con specializzazione in <strong>Cybersecurity</strong> e <strong>Back-End Engineering</strong>. Sviluppo strumenti per analisi offensive, automazioni di sicurezza, RAT, script avanzati e applicazioni web sicure e scalabili.</p>
-
-    <h2>💣 Progetti Hardcore</h2>
+    <h2>🧰 Progetti selezionati</h2>
     <ul>
       <li>
-        <strong>FTP Credentials Checker</strong><br/>
-        <em>Python</em><br/>
-        <a href="https://github.com/aitsu01/FTP-Credentials-Checker" target="_blank">Codice su GitHub</a> |
-        <a href="https://aitsu01.github.io/FTP-Credentials-Checker/" target="_blank">Demo Live</a><br/>
-        <p>Tool per test credenziali FTP, configurazioni e automazioni via file .env. Ideale per penetration tester e sysadmin.</p>
+        <strong>FTP Credentials Checker</strong> <br/>
+        <em>Python</em> — <a href="https://github.com/aitsu01/FTP-Credentials-Checker" target="_blank">GitHub</a> |
+        <a href="https://aitsu01.github.io/FTP-Credentials-Checker/" target="_blank">Demo</a><br/>
+        <p>Strumento leggero per testare credenziali FTP, con supporto a file .env e upload automatici. Pensato per red teamer e amministratori.</p>
       </li>
-
       <li>
-        <strong>Telegram BOT RAT</strong><br/>
-        <em>Python & C++</em><br/>
-        <a href="#" target="_blank">Codice a breve su GitHub</a> |
-        <a href="https://github.com/aitsu01/TelegramRAT-BOT-GUI" target="_blank">Demo Live</a><br/>
-        <p>RAT con C2 in Python e payload in C++. Controllo remoto via Telegram, shell reversa, keylogging e altro.</p>
+        <strong>Telegram BOT RAT</strong> <br/>
+        <em>Python & C++</em> — <a href="https://github.com/aitsu01/TelegramRAT-BOT-GUI" target="_blank">GitHub</a><br/>
+        <p>RAT personalizzato con interfaccia C2 in Python e payload in C++, per studi sulla comunicazione sicura via Telegram.</p>
       </li>
-
       <li>
-        <strong>Sky Scanner</strong><br/>
-        <em>Laravel, HTML5 & CSS</em><br/>
-        <a href="https://github.com/aitsu01/Booking-FlightsScan-Laravel" target="_blank">Codice su GitHub</a> |
-        <a href="https://github.com/aitsu01/Booking-FlightsScan-Laravel" target="_blank">Demo Live</a><br/>
-        <p>Motore di ricerca voli in stile Skyscanner con backend in Laravel e API per gestione prenotazioni.</p>
+        <strong>Sky Scanner</strong> <br/>
+        <em>Laravel, HTML5 & CSS</em> — <a href="https://github.com/aitsu01/Booking-FlightsScan-Laravel" target="_blank">GitHub</a><br/>
+        <p>Motore di prenotazione voli con API integrate, backend in Laravel e UI responsive. Progetto adatto per test e simulazioni di e-commerce.</p>
       </li>
     </ul>
 
@@ -156,25 +102,8 @@
     </p>
 
     <footer>
-      &copy; 2025 - aitsu01 | Exploit. Build. Secure.
+      &copy; 2025 - aitsu01 | Coding. Securing. Evolving.
     </footer>
   </div>
-
-  <script>
-    function unlockPortfolio() {
-      const user = document.getElementById("username").value;
-      const pass = document.getElementById("password").value;
-
-      // Simulazione login (qualsiasi input sblocca l'accesso)
-      if (user && pass) {
-        document.getElementById("loginModal").classList.add("hidden");
-        document.getElementById("mainContent").classList.remove("hidden");
-      } else {
-        alert("Accesso negato: credenziali richieste.");
-      }
-    }
-  </script>
 </body>
 </html>
-
-
