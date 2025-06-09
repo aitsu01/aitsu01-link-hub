@@ -186,6 +186,108 @@
       I design scalable and secure apps, write Python automation tools, and build RATs and C2 platforms. I'm passionate about learning, breaking, and securing systems.
     </p>
   </section>
+  <section id="multilang-bio">
+  <h2>🌐 Profilo Multilingua</h2>
+  <label for="langSelect"><strong>Seleziona lingua:</strong></label>
+  <select id="langSelect" onchange="changeLang()">
+    <option value="it">Italiano 🇮🇹</option>
+    <option value="en">English 🇬🇧</option>
+    <option value="ja">日本語 🇯🇵</option>
+    <option value="ru">Русский 🇷🇺</option>
+    <option value="tr">Türkçe 🇹🇷</option>
+    <option value="de">Deutsch 🇩🇪</option>
+  </select>
+
+  <div id="langContent" style="margin-top: 1.5rem;"></div>
+
+  <script>
+    const bios = {
+      it: `
+        <p>Sviluppatore Full Stack con oltre 20 anni di esperienza nel settore IT, attualmente specializzando in <strong>Cybersecurity Coding</strong> con focus su sviluppo front-end, back-end e sicurezza offensiva.</p>
+        <p>Ho studiato diverse lingue in contesti internazionali:</p>
+        <ul>
+          <li>🇬🇧 Inglese – Vancouver, British Columbia (Canada)</li>
+          <li>🇯🇵 Giapponese – 2 anni a Kyoto</li>
+          <li>🇹🇷 Turco – 8 mesi presso l'Università di Ankara a Istanbul</li>
+          <li>🇷🇺 Russo – Ambasciata russa a Roma</li>
+          <li>🇩🇪 Tedesco – formazione in Alto Adige</li>
+        </ul>
+        <p>Combino competenze tecniche e culturali per realizzare soluzioni scalabili, sicure e internazionali.</p>
+      `,
+      en: `
+        <p>Full Stack Developer with 20+ years of IT experience, currently specializing in <strong>Cybersecurity Coding</strong> focused on front-end, back-end, and offensive security development.</p>
+        <p>I’ve studied several languages in real-world contexts:</p>
+        <ul>
+          <li>🇬🇧 English – Vancouver, British Columbia (Canada)</li>
+          <li>🇯🇵 Japanese – 2 years in Kyoto</li>
+          <li>🇹🇷 Turkish – 8 months at Ankara University (Istanbul)</li>
+          <li>🇷🇺 Russian – Russian Embassy in Rome</li>
+          <li>🇩🇪 German – vocational training in South Tyrol</li>
+        </ul>
+        <p>I build scalable, secure and globally-aware solutions by combining technology and cultural fluency.</p>
+      `,
+      ja: `
+        <p>私は20年以上のIT経験を持つフルスタック開発者です。現在、<strong>サイバーセキュリティコーディング</strong>を専門としています。</p>
+        <p>国際的な環境で以下の言語を学びました：</p>
+        <ul>
+          <li>🇬🇧 英語 – カナダ・ブリティッシュコロンビア州バンクーバー</li>
+          <li>🇯🇵 日本語 – 京都で2年間</li>
+          <li>🇹🇷 トルコ語 – アンカラ大学（イスタンブール）で8ヶ月</li>
+          <li>🇷🇺 ロシア語 – ローマのロシア大使館</li>
+          <li>🇩🇪 ドイツ語 – 南チロルでの職業訓練</li>
+        </ul>
+        <p>技術と文化の両方を活かして、グローバルで安全なソリューションを開発しています。</p>
+      `,
+      ru: `
+        <p>Я — full stack разработчик с более чем 20-летним стажем в IT. Сейчас я изучаю <strong>кибербезопасность</strong>.</p>
+        <p>Я изучал языки в международной среде:</p>
+        <ul>
+          <li>🇬🇧 Английский — Ванкувер, Канада</li>
+          <li>🇯🇵 Японский — 2 года в Киото</li>
+          <li>🇹🇷 Турецкий — 8 месяцев в Анкарском университете (Стамбул)</li>
+          <li>🇷🇺 Русский — Посольство РФ в Риме</li>
+          <li>🇩🇪 Немецкий — Южный Тироль</li>
+        </ul>
+        <p>Объединяю технические навыки и языковую гибкость для международной разработки и безопасности.</p>
+      `,
+      tr: `
+        <p>20+ yıllık deneyime sahip bir Full Stack Developer'ım. Şu anda <strong>Siber Güvenlik Kodlama</strong> üzerine uzmanlaşıyorum.</p>
+        <p>Dilleri uluslararası ortamlarda öğrendim:</p>
+        <ul>
+          <li>🇬🇧 İngilizce – Vancouver, British Columbia (Kanada)</li>
+          <li>🇯🇵 Japonca – 2 yıl Kyoto'da</li>
+          <li>🇹🇷 Türkçe – Ankara Üniversitesi (İstanbul) 8 ay</li>
+          <li>🇷🇺 Rusça – Roma'daki Rus Büyükelçiliği</li>
+          <li>🇩🇪 Almanca – Güney Tirol'de mesleki eğitim</li>
+        </ul>
+        <p>Kültürel ve teknik bilgileri birleştirerek güvenli ve ölçeklenebilir çözümler üretiyorum.</p>
+      `,
+      de: `
+        <p>Ich bin ein Full Stack Developer mit über 20 Jahren IT-Erfahrung und derzeit spezialisiert auf <strong>Cybersecurity Coding</strong>.</p>
+        <p>Ich habe folgende Sprachen in internationalen Kontexten gelernt:</p>
+        <ul>
+          <li>🇬🇧 Englisch – Vancouver, British Columbia (Kanada)</li>
+          <li>🇯🇵 Japanisch – 2 Jahre in Kyoto</li>
+          <li>🇹🇷 Türkisch – 8 Monate an der Universität Ankara (Istanbul)</li>
+          <li>🇷🇺 Russisch – Russische Botschaft in Rom</li>
+          <li>🇩🇪 Deutsch – Berufsausbildung in Südtirol</li>
+        </ul>
+        <p>Ich verbinde technisches Wissen mit kultureller Kompetenz, um globale, sichere Lösungen zu entwickeln.</p>
+      `
+    };
+
+    function changeLang() {
+      const lang = document.getElementById("langSelect").value;
+      document.getElementById("langContent").innerHTML = bios[lang];
+    }
+
+    // Default: Italian
+    document.addEventListener("DOMContentLoaded", () => {
+      document.getElementById("langContent").innerHTML = bios["it"];
+    });
+  </script>
+</section>
+
 
   <section id="skills">
     <h2> Skill Level</h2>
